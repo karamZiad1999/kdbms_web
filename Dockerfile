@@ -1,4 +1,4 @@
 FROM tomcat:8.0-alpine
-ADD target/kdbms-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
+ADD target/kdbms_web.war /usr/local/tomcat/webapps/
+CMD["catalina.sh", "run"]
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
