@@ -47,21 +47,21 @@ public class MainServlet extends HttpServlet {
         Scanner sc = null;
         String output = "";
         String input = request.getParameter("input");
-        try {
-            socket = new Socket("127.0.0.1", 2000);
-            out = new PrintWriter(socket.getOutputStream(), true);
-            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-            out.println(input);
-            output = in.readLine();
-
-        } catch (Exception e) {
-            System.out.println(e);
-        } finally {
-            socket.close();
-            out.close();
-            in.close();
-        }
+//        try {
+//            socket = new Socket("127.0.0.1", 2000);
+//            out = new PrintWriter(socket.getOutputStream(), true);
+//            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//
+//            out.println(input);
+//            output = in.readLine();
+//
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        } finally {
+//            socket.close();
+//            out.close();
+//            in.close();
+//        }
         request.setAttribute("output", output);
     }
         public void destroy(){}
